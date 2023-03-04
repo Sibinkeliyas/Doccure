@@ -11,26 +11,7 @@ function Body() {
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
 	
-    useEffect( 
-        () => {
-            if (user && user.access_token !== undefined) {
-                axios
-                    .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
-                        headers: {
-                            Authorization: `Bearer ${user.access_token}`,
-                            Accept: 'application/json'
-                        }
-                    })
-                    .then((res) => {
-						dispatch(userGoogleLogin(res.data))
-                    })
-                    .catch((err) => {
-						navigate('/user_login')
-					});
-            }
-        },
-        []
-    );
+
 
 
   return (

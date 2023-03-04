@@ -328,7 +328,7 @@ table.table td h2 span {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .favourote-card{
     width: 230px;

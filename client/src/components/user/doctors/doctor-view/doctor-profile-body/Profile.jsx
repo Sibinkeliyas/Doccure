@@ -12,6 +12,10 @@ import {user_add_favorite_doctor, user_favorite_doctor} from '../../../../../red
 
 
 
+// doctor profile from user side 
+// url : /doctor profile
+
+
 function Profile() {
     const location = useLocation()
     const navigate = useNavigate()
@@ -24,11 +28,11 @@ function Profile() {
     }
     const dispatch = useDispatch()
     useEffect (() => {
-        dispatch(user_favorite_doctor(userData._id , location.state.doctor._id))
+        dispatch(user_favorite_doctor(userData._id , location.state.doctor._id , userData.from))
     },[favDoctor])
     const favDoctors = (doctorId) => {
         if(localStorage.getItem("userInfo")) {
-            dispatch(user_add_favorite_doctor(userData._id,doctorId))
+            dispatch(user_add_favorite_doctor(userData._id, doctorId , userData.from))
             if(favDoctor=== true) {
                 setFavDoc(false)
             } else {
@@ -47,7 +51,6 @@ function Profile() {
   return (
     <>
         <div className="profil-container">
-   
             <div className="profile_container_box mt-5">
                 <div className="prfile_details">
                     <div className="profile_image_div">
@@ -84,7 +87,7 @@ function Profile() {
                                 
                                    {
                                     
-                                    favDoc !== undefined ? 
+                                    favDoc !== undefined  ? 
                                         favDoc.doctorId.map((data) => {
                                             if(data._id == location.state.doctor._id) {
                                                 favDocStatus = true

@@ -1,6 +1,5 @@
 import React from 'react'
 import './clinic.css'
-import Card from 'react-bootstrap/Card';
 
 function Clinic() {
   return (
@@ -13,7 +12,7 @@ function Clinic() {
 					</div>
 					<div className="clinic-speciality">
 						
-							<div className="user-favourite-div- row">
+							<div className="user-favourite-div- row" style={{justifyContent:"center"}}>
 							<div className="favourote-card  col-md-6 col-lg-3  mb-3 me-4 card   " style={{width:'200px',height:'264px' , }}>
                                 <div className="favourite-card-body-items-div" style={{width: "100%" ,height:'100%'}}>
                                     <div className="favourite-card-body-items mt-5 speciality-image-div">

@@ -29,7 +29,6 @@ exports.user_Search_doctors = (req , res ) => {
 
 exports.user_add_favorites_doctors = (req , res) => {
     try {
-        console.log("dddddddddddddddddddddddddddddddddddddd");
         doctor.doAddToFavorites(req.body).then((data) => {
             res.status(200).json(data)
         }).catch((err) => {
@@ -44,7 +43,7 @@ exports.user_add_favorites_doctors = (req , res) => {
 
 exports.user_favorite_doctors = (req ,res ) => {
     try {
-        doctor.doFavoriteDoctors(req.body.userId).then((Data) => {
+        doctor.doFavoriteDoctors(req.body).then((Data) => {
             res.status(200).json(Data)
         }).catch((err) => {
             res.status(401).json(err)

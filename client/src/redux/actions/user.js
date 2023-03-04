@@ -31,7 +31,7 @@ export const userLogin = (email , password) => async (dispatch) => {            
     {email , password},
     config
     ).then((data) => {
-        dispatch({type : userActions.LOGINSUCCES , payLoad : data});
+        dispatch({type : userActions.LOGINSUCCES , payLoad : data.data});
         localStorage.setItem('userInfo' , JSON.stringify(data.data));
     }).catch((err) => {
         dispatch({type : userActions.LOGINFAILED , payLoad : err.response.data})
@@ -41,8 +41,18 @@ export const userLogin = (email , password) => async (dispatch) => {            
 
 export const userGoogleLogin = (googleCodeResponce) => async (dispatch) => {                            // user login
         dispatch({type : userActions.LOGINREQUEST});
-        dispatch({type : userActions.LOGINSUCCES , payLoad : googleCodeResponce});
-        localStorage.setItem('userInfo' , JSON.stringify(googleCodeResponce));
+        const config = {
+            headers : {
+                "Content-type": "application/json",
+            }
+        }
+        axios.post("http://localhost:3001/user_login",{googleCodeResponce} , config).then((data) => {
+            localStorage.setItem('userInfo' , JSON.stringify(data.data));
+            dispatch({type : userActions.LOGINSUCCES , payLoad : data.data});
+        }).catch((err) => {
+            dispatch({type : userActions.LOGINSUCCES , payLoad : err.response.data});
+        })
+        
 }
 
 
@@ -95,7 +105,7 @@ export const user_filter_doctor = (gender , speciality) => async (dispatch) => {
     })
 }
 
-export const user_add_favorite_doctor = (userId , doctorId) => async (dispatch) => {
+export const user_add_favorite_doctor = (userId , doctorId , from) => async (dispatch) => {
    try {
     dispatch({type:userActions.USERFAVORITEADDDOCTORREQUEST})
     let token = JSON.parse(localStorage.getItem('userInfo'))
@@ -108,7 +118,7 @@ export const user_add_favorite_doctor = (userId , doctorId) => async (dispatch) 
             "content-type" : "application/json",
         }
     }
-    axios.post("http://localhost:3001/user_add_favorite_doctors",{ userId ,doctorId } , config).then((Data) =>{
+    axios.post("http://localhost:3001/user_add_favorite_doctors",{ userId ,doctorId , from} , config).then((Data) =>{
         dispatch({type : userActions.USERFAVORITEADDDOCTORSUCCESS, payLoad : Data.data})
     }).catch((err) => {
         dispatch({type : userActions.USERFAVORIREDOCTORFAILED, payLoad : err.response.data})
@@ -118,7 +128,7 @@ export const user_add_favorite_doctor = (userId , doctorId) => async (dispatch) 
    }
 }
 
-export const user_favorite_doctor = (userId , doctorId) => async (dispatch) => {
+export const user_favorite_doctor = (userId , doctorId ,from) => async (dispatch) => {
     dispatch({type:userActions.USERFAVORITEDOCTORREQUEST})
     let token = JSON.parse(localStorage.getItem('userInfo'))
     const config = {
@@ -127,7 +137,7 @@ export const user_favorite_doctor = (userId , doctorId) => async (dispatch) => {
             "content-type" : "application/json",
         }
     }
-    axios.post(`http://localhost:3001/user_favorite_doctors`,{ userId ,doctorId } , config).then((Data) =>{
+    axios.post(`http://localhost:3001/user_favorite_doctors`,{ userId ,doctorId ,from} , config).then((Data) =>{
         localStorage.setItem("favoriteDoctors" , JSON.stringify(Data.data))
         dispatch({type : userActions.USERFAVORITEDOCTORSUCCESS, payLoad : Data.data})
     }).catch((err) => {

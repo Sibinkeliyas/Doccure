@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector , useDispatch } from 'react-redux';
 import { userGoogleLogin, userLogin} from '../../../../redux/actions/user'
 import Loading from '../../../loading/Loading';
+import axios from 'axios';
 
 // google login
 import { useGoogleLogin } from '@react-oauth/google';
@@ -26,7 +27,26 @@ function Body_login() {
 	// google login
 
     const login = useGoogleLogin({
-        onSuccess: (codeResponse) => dispatch(userGoogleLogin(codeResponse)),
+        onSuccess: (codeResponse) => {
+			
+				
+					if (codeResponse && codeResponse.access_token !== undefined) {
+						axios
+							.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`, {
+								headers: {
+									Authorization: `Bearer ${codeResponse.access_token}`,
+									Accept: 'application/json'
+								}
+							})
+							.then((res) => {
+								dispatch(userGoogleLogin(res.data))
+							})
+							.catch((err) => {
+								navigate('/user_login')
+							});
+					}
+				
+		},
         onError: (error) => navigate('/user_login')
     });
 
@@ -127,7 +147,7 @@ function Body_login() {
 												  
 												{/* google login */}
 													<div className="col-12">
-														<button className="btn-google" onClick={() => login()}><i className="fab fa-google mr-1"></i> Login</button>
+														<button className="btn-google" onClick={() => login()}><i className="fab fa-google mr-1" style={{textDecoration:"none",display:"inline-block"}}></i> Login</button>
 													</div>			
 											</div>
 											<div className="text-center dont-have">Don’t have an account? <a onClick={register}>Register</a></div>

@@ -11,8 +11,6 @@ export const userLoginReducer = (state = initialState , {type,payLoad}) => {
                 data : payLoad
             }
         case userActions.LOGINSUCCES : 
-        console.log("payLoad");
-        console.log(payLoad);
             return {
                 loading : false ,
                 data : payLoad

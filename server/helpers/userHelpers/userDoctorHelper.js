@@ -1,5 +1,7 @@
 const doctorSchema = require('../../model/doctor/doctorSchema')
 const favDoctors = require('../../model/user/favoriteDoctor')
+const mongoose = require('mongoose')
+
 
 module.exports = {
     doSearchDoctotor : ( gender , specialities) => {
@@ -52,9 +54,12 @@ module.exports = {
     } ,                                        
     doAddToFavorites : (data) => {
         return new Promise(async(resolve, reject) => {
+            if(data.from === "google") {
+                data.userId = mongoose.Types.ObjectId(data.userId+"abf")
+            }
             try {
-                console.log(data);
                let userFav = await favDoctors.findOne({userId : data.userId})
+               console.log(userFav);
                if(userFav) {
                 let favDoc = userFav.doctorId.findIndex((doctorId) => doctorId == data.doctorId)
                 console.log(favDoc);
@@ -69,6 +74,7 @@ module.exports = {
                     })
                 }
                } else {
+               
                 favDoctors.create(data).then((Data) => {
                     resolve(Data)
                 }).catch((err) => {
@@ -82,11 +88,17 @@ module.exports = {
             }
         })
     } ,
-    doFavoriteDoctors : (userId) => {
+    doFavoriteDoctors : (data) => {
+        console.log(data);
+        if(data.from === "google") {
+            console.log("from google llllllllllllllllllllllllllllllllll");
+            data.userId = mongoose.Types.ObjectId(data.userId+"abf")
+        }
        return new Promise((resolve, reject) => {
         try {
-            favDoctors.findOne({userId : userId}).populate('doctorId').exec((err , data) => {
+            favDoctors.findOne({userId : data.userId}).populate('doctorId').exec((err , data) => {
                 if(err) {
+                    console.log(err);
                     reject(err)
                 } else {
                     console.log(data);
@@ -94,6 +106,7 @@ module.exports = {
                 }
             })
         } catch (err) {
+            console.log(err);
             reject(err)
         }
        })

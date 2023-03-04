@@ -10,14 +10,14 @@ import { userLogoutAction, user_favorite_doctor } from '../../../../../redux/act
 import { googleLogout, } from '@react-oauth/google';
 
 
-
+// user profile 
+// url : /user_profile
 
 function Body() {
     
     const [option , setOption] = useState('Dash Board')
     const [appointORbilling , setAppointORbilling] = useState('appointment')
     const userData = useSelector((state) => state.userLogin.data)
-    console.log(userData);
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -44,7 +44,7 @@ function Body() {
     // google
     // favorite doctors
     useEffect(() => {
-        dispatch(user_favorite_doctor(userData._id))
+        dispatch(user_favorite_doctor(userData._id , null , userData.from))
     } , [])
     const favDoc = useSelector((state) => state.userFavDocReducer.favDoc)
 
