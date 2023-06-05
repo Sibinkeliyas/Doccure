@@ -1,0 +1,39 @@
+.dashboard-image-and-caption span{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #0fd3f2;
+    color: #0fd3f2;
+    font-weight: bold;
+}
+.dashboard-image-and-caption .user{
+    border: 3px solid #198754;
+    color: #198754;
+}
+.dashboard-image-and-caption .caption div{
+    height: 10px;
+}
+.caption .percentage{
+    background-color: rgb(198, 198, 198);
+}
+.dashboard .card {
+    width: 15rem;
+    margin-bottom: 2%;
+}
+.admin-tab-content{
+    height: 81vh;
+    width: 82%;
+    overflow-y: scroll;
+}
+@media only screen and (max-width: 576px) {
+    .speciality-filter-div {
+        padding-right: 40px;
+    }
+}
+@media only screen and (max-width: 1132px) {
+    .dashboard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

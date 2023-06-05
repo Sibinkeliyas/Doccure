@@ -1,0 +1,60 @@
+.succes-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    background-color: #f8f9fa;
+}
+.succes-body{
+    background-color: #ffff;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading-2{
+    font-weight: 600;
+    display: inline;
+}
+.tick-mark{
+    background-color: #09e5ab;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+.fa-check{
+    font-weight: bold;
+    font-size: 30px;
+}
+.doctor-name-time{
+    font-weight: bolder;
+    font-size: medium;
+}
+@media only screen and (max-width : 760px) {
+    .succes-container {
+        height: 600px;
+        align-items: center;
+    }
+  
+   .heading-2 {
+    margin-left: 18%;
+    }
+    .heading-2-content{
+        margin-left: 22%;
+    }
+   .doctor-name-time{
+        display: block;
+   }
+   .content{
+        text-align: center;
+   }
+   
+}

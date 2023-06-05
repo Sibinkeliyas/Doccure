@@ -1,0 +1,150 @@
+.invoice-container{
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invoice-body{
+    width: 60%;
+    height: 90%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.hos-image-and-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.hos-image-div{
+    display: flex;
+    justify-content: start;
+    
+}
+.hos-image {
+    width: 200%;
+    float: left;
+    padding: 20%;
+}
+.order-id {
+    display: inline;
+}
+
+.book-date h3{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    
+}
+.issued-date {
+    display: inline;
+}
+.book-date p{
+    color: gray;
+    font-size: 15px;
+    margin-right: 50px;
+    
+}
+.book-date{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+.invoice-from-to{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.invoice-from-to p{
+    color: gray;
+    font-weight: bold;
+    margin:0;
+    padding:0;
+}
+.invoice-payment-method p {
+    color: gray;
+    font-weight: bold;
+    margin:0;
+    padding:0;
+}
+.invoice-table td{
+    color: gray;
+    font-weight: bold;
+}
+.invoice-table th{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.invoice-to{
+    float: right;
+}
+.invoice-from-header{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.invoice-total{
+    display: inline;
+}
+.invoice-subtotal {
+    display: inline;
+}
+.invoice-distotal{
+    display: inline;
+}
+.invoice-total-subtotal{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 15%;
+}
+.invoice-total-subtotal h5{
+    font-weight: bolder;
+}
+.invoice-total-subtotal p{
+    color: gray;
+    font-weight: bold;
+}
+.invoice-table-sub-table{
+        border:show;
+        margin-left: 20%;
+}
+.items-table{
+    align-items: center;
+} 
+.invoice-other-information p{
+    color: gray;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 765px) {
+    .hos-image-and-date{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 25%;
+    }
+    .book-date{
+        display: flex;
+        flex-direction: column;
+        margin-left: 43%;
+    }
+    .invoice-total-subtotal{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    .invoice-total-subtotal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  .download-button{
+    float: right;
+    margin-right: 20%;
+  }

@@ -1,0 +1,394 @@
+.doc-home {
+    width: 100%;
+    /* background-color: #f8f9fa; */
+    display: flex;
+    flex-direction: column;
+}
+.doc-main-home {
+    width: 100%;
+}
+.doc-sidebar{
+    width: 22%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: auto; */
+    height: 100%;
+}
+.doc-home-dashboard {
+    width: 70%;
+    /* min-height: 110vh; */
+    float: right;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    animation-delay: 2s;
+
+}
+
+.doc-image-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 17em;
+    border-radius: 10px;
+}
+.doc-image-roud{
+    border-radius: 50%;
+    width: 50%;
+    background-color:rgb(241, 241, 241);
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doc-image {
+    border-radius: 50%;
+    height: 90%;
+    width: 90%;
+}
+.doc-image img {
+    border-radius: 50%;
+}
+.doc-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.doc-details h5 {
+    font-weight: bolder;
+}
+.doc-details p {
+    color: rgb(196, 196, 196);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.doc-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    animation: drop 2s ease forwards;
+}
+/* @keyframes drop{
+  0%{opacity: 0}
+  70%{transform: translateY(700px)}
+  100%{transform: translateY(650px)}
+} */
+.doc-option{
+    width: 100%;
+    height: 3rem;
+    font-weight: bolder;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.doc-home-dashboard-head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 8em;
+}
+.doc-home-dashboard-head-1{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.doc-home-dashboard-head-1 div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.doc-home-dashboard-head-1 div h5 {
+    font-weight: bolder;
+}
+.doc-home-dashboard-head-1 div p{
+    font-weight: bolder;
+    font-size: large;
+}
+.doc-table-div h5{
+    font-weight: bolder;
+    font-size: larger;
+}
+#pat_appointments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.card-table{
+    width: 100%;
+}
+.doc-pagination{
+    width: 100%;
+}
+
+
+/* patients page */
+
+.doc-patients-page{
+    width: 70%;
+    min-height: 120vh;
+}
+.doc-patint-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.doc-patient-image{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doc-patient-image img{
+    border-radius: 50%;
+    width: 50%;
+    height: 77%;
+}
+.doc-patint-details div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.doc-patint-details div hr{
+    width: 100%;
+}
+.doc-patint-details div ul{
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.doc-patint-details div ul div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.doc-patint-details div ul div .font-weight-bold {
+    font-weight: bold;
+}
+.doc-patients-page div .loadmore{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+.doc-patients-page .loadmore button{
+    background-color: #0ce0ff;
+    color: white;
+}
+.doc-patients-page .filter {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+}
+.doc-patients-page .filter .form-group{
+    border: none;
+}
+.bottom-things{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.doc-patients-page div .backToTp {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/* time schedule */
+.doc-time-schedule{
+    width: 95%;
+}
+.doc-time-schedule h4{
+    font-weight: bold;
+}
+.doc-time-day-and-time{
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+}
+.doc-time-day-and-time .doc-time-day{
+    width: 100%;
+}
+.doc-time-day-and-time .doc-time-day div{
+    border: 1px solid gray;
+    font-weight: bold;
+
+}
+.doc-time-day-and-time .doc-time-day-hove div{
+    color: gray;
+    min-width: 15%;
+}
+.doc-time-day-and-time .doc-time-day-hove div:hover {
+    background-color: #0ce0ff;
+    border: none;
+    color: white;
+}
+.doc-time-slots .day{
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.doc-time-slots .day i {
+    color:#bd716e;
+}
+.doc-time-slots .day i:hover{
+    color: white;
+}
+.doc-time-slots .day:hover{
+    background-color: #d9534f;
+    color: white;
+}
+.doc-time-edit-button{
+    color: #0ce0ff;
+    font-weight: bold;
+}
+.doc-time-edit-button:hover{
+    color: #0ce0ff;
+    font-weight: bold;
+}
+
+/* review */
+.doc-review-div{
+    width: 100%;
+}
+.doc-user-review-inner-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .doc-user-review-use-data{
+    display: flex;
+    
+} */
+.doc-review-user-image{
+    width: 5rem;
+    height: 3.4rem;
+    border-radius: 50%;
+}
+.doc-review-user-details{
+    font-weight: bolder;
+}
+.doc-user-review-use-data-rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.doc-review-replay-button{
+    color: #0ce0ff;
+}
+.profile-submit-button{
+    float: right;
+}
+@media screen and (max-width: 1306px) {
+    .doc-sidebar {
+        width: 26%;
+    }
+    .doc-home-dashboard {
+        width: 66%;
+    }
+}
+@media screen and (max-width: 877px) {
+    .doc-home-dashboard-head{
+        flex-direction: column;
+        height: 24rem;
+        padding: 4%;
+    }
+    .doc-home-dashboard-head-1{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 774px) {
+
+    .doc-patients-page .filter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2rem;
+    }
+    .doc-patients-page .filter .form-group {
+            padding-right: 2rem;
+    }
+    .doc-patients-page .filter .form-group input{
+        width: 73%;
+    }  
+}
+@media screen and (max-width: 769px) {
+
+    .doc-user-review-inner-div {
+       flex-direction: column;
+    }
+    .doc-user-review-use-data-rating{
+        margin-left: -10rem;
+    }
+
+}
+@media screen and (max-width: 769px) {
+
+    .doc-user-review-inner-div {
+        flex-direction: column;
+    }
+
+    .doc-user-review-use-data-rating {
+        margin-left: -10rem;
+    }
+
+}
+@media screen and (max-width: 575px) {
+
+    .doc-user-review-inner-div {
+        flex-direction: row;
+    }
+
+    .doc-user-review-use-data-rating {
+        margin-left: 0rem;
+        margin-right: 3rem;
+    }
+
+}
+@media screen and (max-width: 927px) {
+
+    .doc-review-div {
+            width: 94%;
+            margin-left: 1rem;
+    }
+
+
+}

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;1,400&family=Titillium+Web:wght@300&display=swap');
+
+* {
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.chat-window {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.left-sidebar {
+    width: 30%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.right-sidebar {
+    width: 70%;
+    height: 100%;
+    background-image: url("../../assets/image.jpg");
+}
+
+.left-bar-nav {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: white;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: center;
+}
+
+.Profile-image {
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.whatsapploadingimage {
+    width: 100%;
+    height: 100%;
+}
+
+.header h3 {
+    color: rgb(121, 121, 121);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    height: 4rem;
+}
+
+.search-bar input {
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 10rem;
+    height: 60%;
+    padding-left: 5px;
+}
+
+.chat-users {
+    border: 1px solid gray;
+    height: 76.5vh;
+    overflow-y: scroll;
+}
+
+.users-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-name {
+    font-weight: bolder;
+    color: black;
+}
+
+.user-name-data h5 {
+    margin: 0;
+}
+
+.user-name-data p {
+    margin: 0;
+    color: #97989c;
+}
+
+/* .chat-users{
+    height: 100%;
+} */
+.user-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.user-name-data {
+    margin: 2rem;
+}
+
+.notification-badge {
+    margin-right: 10px;
+}
+
+.users-list:hover {
+    background-color: #F0F2F5;
+}
+
+.right-bar-nav {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* border-left: 1px solid gray; */
+}
+
+.chat-second-window {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-bar-nav .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.chat-message {
+    /* height: 3rem;
+    width: 5rem; */
+    min-width: 5rem;
+    min-height: 3rem;
+    max-width: 10rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.chat-container {
+    margin: 0rem auto;
+    padding: 1.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.chat-message .chat-message-user {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
+
+.chat-message .chat-time {
+    font-size: 13px;
+    text-align: end;
+    margin: 0;
+}
+
+.chat-message-me {
+    background-color: #e1ffc7;
+    float: right;
+    margin-left: auto;
+}
+
+.chat-message-you {
+    background-color: rgb(255, 255, 255);
+    margin-right: auto;
+}
+
+.menubar-icon {
+    cursor: pointer;
+}
+
+.chat-input-box {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-input-box input {
+    width: 80%;
+    border-radius: 10rem;
+    height: 3rem;
+    border: none;
+}
+
+.chat-input-box i {
+    color: #065002;
+}
+
+/* resposive */
+@media only screen and (max-width: 826px) {
+    .right-sidebar {
+        display: none;
+    }
+
+    .left-sidebar {
+        width: 100%;
+    }
+
+    .users-list {
+        padding: 2rem;
+    }
+}

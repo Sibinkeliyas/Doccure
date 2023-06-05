@@ -1,0 +1,270 @@
+.profil-container{
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    
+}
+.profile_container_box{
+     min-height: 17rem;
+     background-color: rgb(255, 255, 255);
+     min-width:  70%;
+     margin:0 auto;
+     border-radius: 7px;
+     display: flex;
+}
+
+.doctor-profile-image{
+    width: 11rem;
+    height: 10rem;
+    border-radius: 7px;
+}
+.speciality_div{
+    display: inline-flex;
+}
+.speciality_image{
+    width: 19px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.star{
+    font-size: 20px;
+    cursor: pointer;
+}
+.hospital-images{
+    display: flex;
+}
+.hospital-feature-image{
+    width: 50px;
+    border-radius: 5px;
+}
+.prfile_details{
+    min-width: 30%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    display: flex;
+}
+.profile_book_details{
+    min-width: 50%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+.profile-right-side{
+    float: right;
+}
+.profile-details-list{
+    list-style-type: none;
+}
+.icon-list{
+    font-weight: bold;
+}
+.list-icon{
+    font-size: 20px;
+}
+.chat-fav{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fav , .chat{
+    border: 1px solid grey;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 5px;
+}
+.fav:hover{
+    background-color: rgb(246, 62, 62);
+    color: white;
+    border: 1px solid rgb(255, 70, 70);
+}
+.chat:hover{
+    background-color: #51dfa4;
+    color: white;
+    border: 1px solid #51dfa4;
+}
+.chat-fav-icons{
+    cursor: pointer;
+    font-size: 20px;
+}
+.book-button{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.icon-and-button{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* bottom */
+
+.detail_container_box{
+    min-height: 30rem;
+    background-color: rgb(255, 255, 255);
+    max-width: 70%;
+    min-width: 70%;
+    margin:0 auto;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.container-bottom{
+    height: 60px;
+    border-bottom: .1em solid rgba(0,0,0,.125);
+}
+.container-bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bottom-heading{
+    font-weight: bold;
+}
+.bottom-heading:hover{
+    color: #51dfa4;
+    cursor: pointer;
+}
+.overview:hover{
+    border-bottom: 2px solid rgba(0,0,0,.125);
+}
+.location:hover{
+    border-bottom: 2px solid rgba(0,0,0,.125);
+}
+.review:hover{
+    border-bottom: 2px solid rgba(0,0,0,.125);
+}
+
+.aboutMepara{
+    max-width: 70%;
+}
+.reviewDiv{
+    display: flex;
+    flex-direction: column;
+}
+.review-patient-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.reviewPatientName{
+    font-weight: bold;
+}
+.paragraph{
+    color: grey;
+}
+.ratingstar{
+    float: right;
+}
+.card{
+    display: inline-block;
+    border: none;
+}
+.review-image-div{
+    display: flex;
+    justify-content: space-between;
+}
+.review-image{
+    display: flex;
+    justify-content: start;
+    max-width: 70%;
+
+}
+.card-content{
+    width: 100%;
+    border:  2px solid rgba(0,0,0,.125);
+}
+.location-card{
+    display: flex;
+    justify-content: space-around;
+}
+.location-star{
+    float: right;
+}
+
+.hospital{
+    width: 50%;
+}
+.location-star{
+    width: 50%;
+}
+.start-left{
+    float:right;
+}
+.locationLocal{
+    display: flex;
+}
+.menu-doc-book-from-profile{
+    background-color: #51dfa4;
+    border: 1px solid #51dfa4;
+    width: 100%;
+}
+.add-review{
+    color: #f8f9fa;
+    background-color: #51dfa4;
+}
+
+/* responsive */
+@media only screen and (max-width:840px){
+    .profile_container_box{
+        width: 85%;
+    }
+    .detail_container_box{
+        max-width: 85%;
+    }
+    .menu-doc-book-from-profile{
+        width: 21rem;
+    }
+    .profile-right-side{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1528px) {
+    .profile-right-side{
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width:1182px) {
+    .profile_container_box{
+        display: flex;
+        flex-direction: column;
+    }
+    .prfile_details{
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile_image_div{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .profile_book_details{
+       align-items: center;
+       display: flex;
+       justify-content: center;
+    }
+    .doctor-profile-image{
+        width: 15em;
+        height: 12em;
+    }
+    .menu-doc-book-from-profile{
+       width: 85%;
+    }
+    .profile-details-list{
+        align-items: center;
+       
+    }
+    .profile-right-side{
+        width: 100%;
+    }
+}

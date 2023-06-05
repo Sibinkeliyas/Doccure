@@ -1,0 +1,105 @@
+.doctor-book{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+.doctor-profile{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    width: 70%;
+    border-radius: 5px;
+}
+.doctor-image{
+    width: 6rem;
+    height:5rem;
+    border-radius: 5px;
+}
+.doctor-name{
+    font-weight:500;
+}
+.doctor-name:hover{
+    color: #09e5ab;
+    cursor: pointer;
+}
+.doc-location {
+    color: rgb(193, 192, 192);
+    display: flex;
+    flex-direction: row;
+}
+.booking-date-and-time{
+    width: 70%;
+    min-height: 300px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.date-adjustment{
+    height: 60px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: end;
+    width: calc();
+}
+.booking-date{
+    border: none;
+}
+.booking-date:hover {
+    color: #09e5ab;
+}
+.time-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time{
+    width: 167px;
+    height: 40px;
+    background-color: #e9e9e9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time-in-time-box{
+    color: rgb(116, 115, 115);
+}
+.time:hover{
+    background-color: #09e5ab;
+    cursor: pointer;
+}
+.pay-button-div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 70%;
+}
+.proceed-to-pay{
+    background-color: #ffffff;
+    color: #09e5ab;
+    border: 1px solid #09e5ab;
+    min-width: 20%;
+    height: 3rem;
+}
+.proceed-to-pay:hover {
+    background-color: #09e5ab;
+    color: #ffffff;
+    border: 1px solid #09e5ab;
+    
+}
+.proceed-to-pay:click {
+    background-color: #09e5ab;
+}
+.proceed-button-name{
+    font-weight: 500;
+}
+.date-adjustment div div {
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 990px) {
+    .proceed-to-pay {
+      width: 100%;
+    }
+  }

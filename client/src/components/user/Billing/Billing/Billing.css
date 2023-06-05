@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;1,400&family=Titillium+Web:wght@300&display=swap');
+*{
+    font-family: 'Barlow', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+
+}
+.checkout_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+.personal-informations-and-payment-method{
+    width: 60%;
+    height: 60%;
+}
+.checkout_form{
+    width: 60%;
+    background-color: rgb(255,255,255);
+}
+.heading-1{
+    padding-top: 1rem;
+}
+.booksummary{
+    width: 25%;
+    height: 400px;
+    background-color: rgb(255,255,255);
+}
+
+
+.booksummary{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    height: 31rem;
+    flex-basis: 350px;
+    top: 1rem;
+    width: 100%;
+}
+.headerOfBilling {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headerOfBilling h4 {
+    font-size: 20px;
+}
+.booking-details{
+    width: 100%;
+    
+}
+.doctor-name:hover{
+    color: #09e5ab;
+}
+.doctor-details-image{
+    display: flex;
+    justify-content: start;
+}
+.doctor-image{
+    width: 8rem;
+}
+.profile-imge{
+    width: 6rem;
+    height: 5rem;
+    border-radius: 3px;
+}
+.location{
+    color: gray;
+}
+.payment-details{
+    width: 100%;
+    height: 100%;
+}
+.date{
+    display: flex;
+    justify-content: space-between;
+}
+.payment-item{
+    font-weight: 600;
+}
+.payment-fee{
+    color: gray;
+}
+/* input[type=text] {
+    width: 100%;
+} */
+/* form  */
+.card-label {
+    width: 44%;
+}
+.card-label > label {
+    background-color: #fff;
+    color: #959595;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 6px auto auto 8px;
+    padding: 0 7px;
+}
+.card-label > input {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 5%);
+    display: block;
+    height: 50px;
+    margin-top: -13px;
+}
+.form-arrangement {
+    display: flex;
+}
+.heading-of-personal-information h4{
+    font-size: 25px;
+}
+.radio {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+.radio__input {
+    display: none;
+}
+
+.radio__radio {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #d8e4e2;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.radio__radio::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #09e5ab;
+    border-radius: 50%;
+
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio__input:checked + .radio__radio::after {
+    transform: scale(1);
+    
+}
+
+.payment-method{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.for-wallet-direct {
+    display: flex;
+}
+.for-paypal-razorpay{
+    display: flex;
+}
+.book-now-button{
+    float: right;
+    background-color: #09e5ab;
+    color:#ffff;
+    border: #09e5ab;
+    width: 10rem;
+    height: 3rem;
+}
+.book-now-button:hover{
+    background-color: #fff;
+    border:1px solid #09e5ab;
+    color: #09e5ab;
+ }
+
+
+@media only screen and (max-width : 760px) {
+    .checkout_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .checkout_form{
+        width: 80%;
+        height: 750px;
+    }
+    .booksummary {
+        width: 80%;
+        overflow-y: inherit;
+    }
+    .form-arrangement{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-label {
+        width: 90%;
+    }
+    .book-now-button{
+        width: 70%;
+        float: none;
+        align-items: center;
+        text-align: center;
+    }
+ 
+    .book-now-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media  only screen and (max-width : 990px) {
+    .form-arrangement {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .checkout_form{
+        width: 80%;
+        height: 780px;
+    }
+    .form-arrangement{
+        justify-content: start;
+    }
+    .payment-method{
+        display: flex;
+        justify-content: start;
+        margin-right: 6rem;
+    }
+    .for-paypal-razorpay {
+        justify-content: space-around;
+    }
+    .for-wallet-direct{
+        justify-content: space-around;
+    }
+}
